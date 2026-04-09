@@ -1,0 +1,116 @@
+*{
+    padding: 0%;
+    margin: 0px;
+}
+/* =========================================
+   RESETEO Y REGLA SIN SCROLL
+   ========================================= */
+.bodyNoScroll {
+    margin: 0;
+    padding: 0;
+    height: 100vh;      /* Ocupa exactamente el alto de la ventana */
+    overflow: hidden;   /* Oculta cualquier scroll en la página principal */
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #333;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.mainContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Apila las secciones verticalmente */
+    padding: 2vh 4vw;       /* Espaciado responsivo basado en el tamaño de pantalla */
+    box-sizing: border-box;
+    gap: 2vh;               /* Separación entre secciones */
+}
+
+/* =========================================
+   SECCIÓN NOSOTROS (Texto Superior)
+   ========================================= */
+.aboutSection {
+    flex: 0 0 auto; /* No crece, ocupa el espacio justo de su contenido */
+}
+
+.mainTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.descriptionText {
+    font-size: 1rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* =========================================
+   SECCIÓN MISIÓN Y VALORES
+   ========================================= */
+.missionValuesSection {
+    flex: 0 0 auto; /* No crece, ocupa el espacio justo */
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 1.5vh 2vw;
+}
+
+.infoBox {
+    flex: 1; /* Mitad y mitad */
+    padding: 0 1vw;
+}
+
+.borderLeft {
+    border-left: 2px solid #e2e8f0;
+}
+
+.subTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.smallText {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* =========================================
+   SECCIÓN PROYECTOS (Cards Inferiores)
+   ========================================= */
+.projectsSection {
+    flex: 1 1 auto; /* Esta sección toma el resto del espacio disponible */
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* Crucial para evitar que el flex item rompa el layout */
+}
+
+.centerText {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.projectsGrid {
+    flex: 1; /* Toma el espacio sobrante dentro de projectsSection */
+    display: flex;
+    gap: 1.5vw;
+    min-height: 0; /* Crucial para evitar desbordamiento */
+}
+
+.projectCard {
+    flex: 1; /* 3 columnas del mismo tamaño */
+    min-width: 0; /* Permite a la card encogerse si es necesario */
+}
+
+/* En caso de que el texto de la card sea muy largo, se hace scroll SOLO dentro de la card */
+.cardBodyScroll {
+    overflow-y: auto; 
+}
