@@ -1,0 +1,113 @@
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo general muy claro y limpio */
+    color: #333;
+}
+
+/* =========================================
+   SECCIÓN INICIO (HERO)
+   ========================================= */
+.contenedorHero {
+    /* Hace que el hero ocupe el 80% del alto de la pantalla */
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Degradado oscuro, sobrio y tecnológico */
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.title h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.title p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #cbd5e1; /* Gris claro para subtítulo */
+}
+
+/* =========================================
+   SECCIÓN SERVICIOS
+   ========================================= */
+.servicios {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicios h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Centrar el contenedor del botón inferior de servicios */
+.servicios > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+/* Transición suave para las tarjetas de Bootstrap */
+.servicios .card {
+    transition: transform 0.3s ease;
+}
+
+.servicios .card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   SECCIÓN NOSOTROS (EQUIPO/VALORES)
+   ========================================= */
+.nosotros {
+    background-color: #ffffff;
+    padding: 6rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Placeholder para la imagen (mientras no tengas una real) */
+.equipoImg {
+    min-height: 350px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.equipoImg img {
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.equipoTexto {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste de alineación vertical para el texto al lado de la imagen en PC */
+@media (min-width: 768px) {
+    .nosotros .col-md {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 3rem; /* Separación entre la imagen y el texto */
+    }
+}
